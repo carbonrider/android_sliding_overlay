@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".example.ExampleActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:paddingBottom="0dp"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:paddingTop="0dp"
+        android:id="@+id/first_layout"
+        style="@style/DummyContainer">
+        <ImageView
+            android:id="@+id/icon_app"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/txt_app_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/icon_app"
+            android:text="@string/msg_scrolling_behavior"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/icon_app"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btn_try"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_replay_black_24dp"
+                style="@style/Button"
+                android:text="Replay" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.carbonrider.android.slidermenu.layout.SlideLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:orientation="horizontal"
+        android:layout_alignParentStart="true"
+        style="@style/OverlayContainer"
+        android:visibility="gone"
+        android:id="@+id/overlay_layout"
+        android:gravity="center_horizontal|center_vertical">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_replay_5_black_24dp"
+            android:text="5 Replay"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_replay_10_black_24dp"
+            android:text="10 Replay"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_replay_30_black_24dp"
+            android:text="30 Replay"/>
+    </com.carbonrider.android.slidermenu.layout.SlideLinearLayout>
+
+</RelativeLayout>

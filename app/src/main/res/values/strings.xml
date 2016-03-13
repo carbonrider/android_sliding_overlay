@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SliderMenu</string>
+    <string name="action_settings">Settings</string>
+    <string name="msg_scrolling_behavior">Just click below button to see sliding effect. You can then drag overlay to right.</string>
+</resources>
